@@ -12,16 +12,20 @@ namespace Exercice_06
         {
             string firstName, lastName;
             int yearBirth;
+            Console.WriteLine("Entrez votre Prenom");
             firstName = Console.ReadLine();
+            Console.WriteLine("Entrez votre Nom");
             lastName = Console.ReadLine();
+            Console.WriteLine("Entrez votre Année de naissance");
             yearBirth = int.Parse(Console.ReadLine());
 
-            DateTime now = DateTime.Today;
-            int age = now.Year - yearBirth;
-            int.Parse(age);
-            string[] identity = new string[] { firstName, lastName, age };
+            
+            
+            int age = DateTime.Now.Year - yearBirth;
 
-            Console.WriteLine(identity);
+            Console.WriteLine($"Fiche de renseignement : \n Prenom : {firstName} \n Nom {lastName} \n Age {age}: ");
+
+            Console.WriteLine($"Fiche de renseignement : " + Environment.NewLine + $"Prenom : {firstName} \n Nom : {lastName} \n Age {age}: ");
         }
     }
 }
